@@ -11,11 +11,10 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBAction func numberSubmitButton(_ sender: Any) {
-        let generatedNumber = String(arc4random_uniform(6))
-        let guessedNumber = numberSubmit.text
-        
-        if generatedNumber == guessedNumber {
-            guessResult.text = "You won!"
+        let generatedNumber = Int(arc4random_uniform(11))
+        let guessedNumber = Int(numberSubmit.text!)
+        if generatedNumber == guessedNumber! {
+            guessResult.text = "You're right!"
         } else {
             guessResult.text = "Sorry, I was holding up \(generatedNumber) fingers."
         }

@@ -11,12 +11,21 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBAction func numberSubmitButton(_ sender: Any) {
+        let generatedNumber = String(arc4random_uniform(6))
+        let guessedNumber = numberSubmit.text
+        
+        if generatedNumber == guessedNumber {
+            guessResult.text = "You won!"
+        } else {
+            guessResult.text = "Sorry, I was holding up \(generatedNumber) fingers."
+        }
+        
     }
     
     @IBOutlet var numberSubmit: UITextField!
     
     @IBOutlet var guessResult: UILabel!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

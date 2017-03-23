@@ -9,6 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBAction func numberSubmitButton(_ sender: Any) {
+    }
+    
+    @IBOutlet var numberSubmit: UITextField!
+    
+    @IBOutlet var guessResult: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
